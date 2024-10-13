@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website </title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a883cefd4c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -20,8 +21,100 @@
             <li><a href="#">Contact</a></li>
         </ul>
         </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi , I'm <span>Siddharth Yadav</span><br></h1>
+        </div>
     </div>
-</div>    
+</div>
+
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="PortImages/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Hi, I'm Siddharth, a B.Tech student from Silicon University, Bhubaneswar. I have a strong passion for technology and problem-solving, with experience in a variety of projects that have enhanced my skills in development and innovation. My academic journey has given me a solid technical foundation, and I'm always eager to learn, grow, and take on new challenges in the tech world.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Frontend</span><br>HTML, CSS, JavaScript, React</li>
+                        <li><span>Backend</span><br>JSP</li>
+                        <li><span>Database</span><br>MongoDB, MySQL</li>
+                        <li><span>General IT Skills</span><br>SDLC, RDBMS, Java, C, Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Summer Internship</span><br> Ingenious-Tech World: Developed a scalable cloud-based application</li>
+                        <li><span>Summer Internship</span><br>Machine learning With Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - Present</span><br>B.Tech at Silicon University</li>
+                        <li><span>2021</span><br>CBSE 12th Board at Merry City School, Varanasi</li>
+                        <li><span>2019</span><br>CBSE 10th Board at St. Atulanand Convent School, Varanasi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------SERVICES-------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Custom Website Design</h2>
+                <p>Custom Website Design involves creating a unique, tailor-made website that reflects a brand's identity and meets specific business goals. It includes designing layouts, color schemes, and user interfaces from scratch, ensuring the site is visually appealing, user-friendly, and optimized for performance across all devices. This service is ideal for businesses seeking a distinct online presence that stands out from generic templates.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Hosting and Domain Management</h2>
+                <p>Hosting and Domain Management involves setting up and managing website hosting services and domain registration. This ensures your website stays online with reliable performance, secure servers, and proper domain configuration. It also includes handling renewals, DNS settings, and troubleshooting hosting or domain issues.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Web Maintenance & Support</h2>
+                <p>Web Maintenance & Support ensures your website stays updated, secure, and fully functional. This service includes regular updates, bug fixes, security checks, and performance optimizations, along with addressing any technical issues to ensure smooth operation over time.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+</script>
     
 </body>
 </html>
